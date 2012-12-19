@@ -82,5 +82,4 @@
 (autoload 'yaml-mode "yaml-mode" "Major mode for YAML source")
 (add-auto-mode 'yaml-mode "\\.ya?ml$")
 
-
 (provide 'init-ruby-mode)
