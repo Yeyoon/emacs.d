@@ -63,6 +63,7 @@
 (require 'init-haskell)
 (require 'init-ruby-mode)
 (require 'init-rails)
+(require 'init-modes)
 
 (require 'init-lisp)
 (require 'init-slime)
