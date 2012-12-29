@@ -19,7 +19,7 @@
 (require 'init-exec-path) ;; Set up $PATH
 (require 'init-frame-hooks)
 (require 'init-xterm)
-;; (require 'init-themes)
+;;(require 'init-themes)
 (require 'init-osx-keys)
 (require 'init-gui-frames)
 (require 'init-maxframe)
@@ -41,6 +41,7 @@
 (require 'init-mmm)
 (require 'init-growl)
 (require 'init-keybindings)
+;;(require 'init-yasnippet)
 
 (require 'init-editing-utils)
 
