@@ -30,6 +30,7 @@
 (require 'init-ibuffer)
 (require 'init-flymake)
 (require 'init-abbrev)
+(require 'init-vc)
 
 (require 'init-recentf)
 (require 'init-ido)
