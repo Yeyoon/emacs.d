@@ -65,6 +65,7 @@
 (require 'init-haskell)
 (require 'init-ruby-mode)
 (require 'init-rails)
+(require 'init-auctex)
 (require 'init-modes)
 
 (require 'init-lisp)
