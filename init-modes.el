@@ -17,4 +17,8 @@
 ;; js3-mode mode for pjs
 (add-to-list 'auto-mode-alist '("\\.pjs$" . js3-mode))
 
+;; enable pretty mode
+(require 'pretty-mode)
+(global-pretty-mode 1)
+
 (provide 'init-modes)

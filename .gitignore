@@ -3,6 +3,7 @@
 /auto-save-list
 /.session
 /eshell
+.DS_Store
 *.elc
 CVS
 .svn
