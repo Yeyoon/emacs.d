@@ -7,3 +7,24 @@
 [submodule "site-lisp/auto-complete-auctex"]
 	path = site-lisp/auto-complete-auctex
 	url = git://github.com/monsanto/auto-complete-auctex.git
+[submodule "site-lisp/pymacs"]
+	path = site-lisp/pymacs
+	url = git://github.com/pinard/Pymacs.git
+[submodule "site-lisp/ropemacs"]
+	path = site-lisp/ropemacs
+	url = git://github.com/cataliniacob/ropemacs.git
+[submodule "site-lisp/ropemode"]
+	path = site-lisp/ropemode
+	url = git://github.com/cataliniacob/ropemode.git
+[submodule "site-lisp/rope"]
+	path = site-lisp/rope
+	url = git://github.com/cataliniacob/rope.git
+[submodule "site-lisp/pylookup"]
+	path = site-lisp/pylookup
+	url = git://github.com/tsgates/pylookup.git
+[submodule "site-lisp/w3"]
+	path = site-lisp/w3
+	url = git@github.com:blueabysm/w3.git
+[submodule "site-lisp/emacspeak"]
+	path = site-lisp/emacspeak
+	url = git://github.com/emacsmirror/emacspeak.git

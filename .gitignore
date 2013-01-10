@@ -22,3 +22,4 @@ cookies
 site-lisp/package/
 /swank
 /.mc-lists.el
+/site-lisp/*
