@@ -18,6 +18,19 @@
 
 (add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
 
+;;----------------------------------------------------------------------------
+;; pylookup is used to view documents of python
+;;----------------------------------------------------------------------------
+(eval-when-compile (require 'pylookup))
+(setq pylookup-root "~/.emacs.d/site-lisp/pylookup")
+(setq pylookup-program (concat pylookup-root "/pylookup.py"))
+(setq pylookup-db-file (concat pylookup-root "/pylookup.db"))
+(autoload 'pylookup-lookup "pylookup"
+  "Lookup SEARCH-TERM in the Python html indexes." t)
+(autoload 'pylookup-update "pylookup"
+  "Run pylookup-update and create the database at `pylookup-db-file'." t)
 
+(global-set-key (kbd "C-c h") 'pylookup-lookup)
+(global-set-key (kbd "C-c u") 'pylookup-update)
 
 (provide 'init-python-mode)
