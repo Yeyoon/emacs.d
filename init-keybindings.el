@@ -4,4 +4,6 @@
 (global-set-key (kbd "C-x c") 'comment-or-uncomment-region)
 (global-set-key (kbd "M-`") 'other-window)
 
+(global-set-key (kbd "C-/") 'undo)
+
 (provide 'init-keybindings)

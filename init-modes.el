@@ -21,4 +21,9 @@
 (require 'pretty-mode)
 (global-pretty-mode 1)
 
+;; objective C
+(add-to-list 'magic-mode-alist '("\\(.\\|\n\\)*\n@implementation" . objc-mode))
+(add-to-list 'magic-mode-alist '("\\(.\\|\n\\)*\n@interface" . objc-mode))
+(add-to-list 'magic-mode-alist '("\\(.\\|\n\\)*\n@protocol" . objc-mode))
+
 (provide 'init-modes)

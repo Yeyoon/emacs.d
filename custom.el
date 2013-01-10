@@ -34,14 +34,8 @@
     (delete-region start end)
     (insert (decode-coding-string (string-make-unibyte text) coding-system))))
 
-;; key-bindings
-(global-set-key (kbd "C-/") 'undo)
-
 ;; truncate line
 (toggle-truncate-lines)
-
-;; region background
-(set-face-background 'region "#444444")
 
 ;; Weather Report --------------------------------------------------
 ;; this api key is owned by Lei Wang (blueabysm@gmail.com)
@@ -61,10 +55,6 @@
   (c-set-offset 'arglist-intro '+))
 (add-hook 'c-mode 'set-argument-indentation-style)
 
-;; ruby arguments indentation
-(setq ruby-deep-indent-paren nil)
+;; `browse-url-w3'
+;;(setq browse-url-browser-function 'browse-url-w3)
 
-;; objective C
-(add-to-list 'magic-mode-alist '("\\(.\\|\n\\)*\n@implementation" . objc-mode))
-(add-to-list 'magic-mode-alist '("\\(.\\|\n\\)*\n@interface" . objc-mode))
-(add-to-list 'magic-mode-alist '("\\(.\\|\n\\)*\n@protocol" . objc-mode))

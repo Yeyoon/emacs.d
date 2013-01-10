@@ -25,3 +25,6 @@
 [submodule "site-lisp/w3"]
 	path = site-lisp/w3
 	url = git@github.com:blueabysm/w3.git
+[submodule "site-lisp/pyflakes"]
+	path = site-lisp/pyflakes
+	url = git://github.com/kevinw/pyflakes.git

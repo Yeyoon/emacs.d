@@ -82,4 +82,7 @@
 (autoload 'yaml-mode "yaml-mode" "Major mode for YAML source")
 (add-auto-mode 'yaml-mode "\\.ya?ml$")
 
+;; ruby arguments indentation
+(setq ruby-deep-indent-paren nil)
+
 (provide 'init-ruby-mode)

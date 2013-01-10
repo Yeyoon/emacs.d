@@ -32,6 +32,7 @@
 (require 'init-abbrev)
 (require 'init-vc)
 (require 'init-look)
+;;(require 'init-w3)
 
 (require 'init-recentf)
 (require 'init-ido)
