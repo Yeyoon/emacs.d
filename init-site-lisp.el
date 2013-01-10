@@ -69,6 +69,8 @@ source file under ~/.emacs.d/site-lisp/name/"
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/session/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/org-mode/lisp"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/org-mode/contrib/lisp"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/w3/lisp"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/emacspeak/lisp"))
 
 (defun refresh-site-lisp-submodules ()
   (interactive)
