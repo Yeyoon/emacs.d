@@ -25,6 +25,3 @@
 [submodule "site-lisp/w3"]
 	path = site-lisp/w3
 	url = git@github.com:blueabysm/w3.git
-[submodule "site-lisp/emacspeak"]
-	path = site-lisp/emacspeak
-	url = git://github.com/emacsmirror/emacspeak.git
