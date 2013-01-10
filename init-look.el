@@ -8,12 +8,3 @@
 (set-face-background 'region "#444444")
 
 (provide 'init-look)
-")
-(set-face-foreground 'mode-line-inactive "#CCCCCC")
-(set-face-background 'mode-line "#000000")
-(set-face-foreground 'mode-line "#003300")
-
-;; region background
-(set-face-background 'region "#444444")
-
-(provide 'init-look)
