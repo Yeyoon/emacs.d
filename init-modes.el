@@ -26,4 +26,7 @@
 (add-to-list 'magic-mode-alist '("\\(.\\|\n\\)*\n@interface" . objc-mode))
 (add-to-list 'magic-mode-alist '("\\(.\\|\n\\)*\n@protocol" . objc-mode))
 
+;; gitconfig mode
+(add-to-list 'auto-mode-alist '("\\.gitmodules$" . gitconfig-mode))
+
 (provide 'init-modes)
