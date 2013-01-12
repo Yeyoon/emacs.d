@@ -23,8 +23,17 @@
  truncate-partial-width-windows nil
  visible-bell t)
 
+(global-auto-revert-mode)
+(setq global-auto-revert-non-file-buffers t
+      auto-revert-verbose nil)
+
+;; But don't show trailing whitespace in SQLi, inf-ruby etc.
+(add-hook 'comint-mode-hook
+          (lambda () (setq show-trailing-whitespace nil)))
+
 (transient-mark-mode t)
 
+(define-key global-map (kbd "RET") 'newline-and-indent)
 
 ;;----------------------------------------------------------------------------
 ;; Zap *up* to char is a more sensible default
@@ -51,17 +60,6 @@
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 
-;;----------------------------------------------------------------------------
-;; Autopair quotes and parentheses
-;;----------------------------------------------------------------------------
-(require 'autopair)
-(setq autopair-autowrap t)
-(autopair-global-mode t)
-
-(defun inhibit-autopair ()
-  "Prevent autopair from enabling in the current buffer."
-  (setq autopair-dont-activate t)
-  (autopair-mode -1))
 
 ;;----------------------------------------------------------------------------
 ;; Fix per-window memory of buffer point positions

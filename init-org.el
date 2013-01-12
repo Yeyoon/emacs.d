@@ -1,6 +1,5 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
-(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
 ;; Various preferences
 (setq org-log-done t
@@ -93,9 +92,12 @@
   '(progn
      (require 'org-exp)
      (require 'org-clock)
+     (when *is-a-mac*
+       (require 'org-mac-link-grabber)
+       (add-hook 'org-mode-hook
+                 (lambda ()
+                   (define-key org-mode-map (kbd "C-c g") 'omlg-grab-link))))
      ;;(require 'org-checklist)
      (require 'org-fstree)))
-
-(add-hook 'org-mode-hook 'inhibit-autopair)
 
 (provide 'init-org)
