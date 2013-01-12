@@ -28,3 +28,6 @@
 [submodule "site-lisp/pyflakes"]
 	path = site-lisp/pyflakes
 	url = git://github.com/kevinw/pyflakes.git
+[submodule "site-lisp/emacs-for-python"]
+	path = site-lisp/emacs-for-python
+	url = git@github.com:blueabysm/emacs-for-python.git

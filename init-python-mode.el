@@ -32,4 +32,14 @@
 (global-set-key (kbd "C-c h") 'pylookup-lookup)
 (global-set-key (kbd "C-c u") 'pylookup-update)
 
+;;----------------------------------------------------------------------------
+;; pymacs
+;;----------------------------------------------------------------------------
+(autoload 'pymacs-apply "pymacs")
+(autoload 'pymacs-call "pymacs")
+(autoload 'pymacs-eval "pymacs" nil t)
+(autoload 'pymacs-exec "pymacs" nil t)
+(autoload 'pymacs-load "pymacs" nil t)
+(autoload 'pymacs-autoload "pymacs")
+
 (provide 'init-python-mode)
