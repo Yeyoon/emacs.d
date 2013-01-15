@@ -1,6 +1,8 @@
 ;;-*-coding: utf-8;-*-
 (define-abbrev-table 'Buffer-menu-mode-abbrev-table '())
 
+(define-abbrev-table 'apropos-mode-abbrev-table '())
+
 (define-abbrev-table 'awk-mode-abbrev-table '())
 
 (define-abbrev-table 'c++-mode-abbrev-table '())
@@ -66,6 +68,8 @@
 
 (define-abbrev-table 'python-mode-abbrev-table
   '(
+    ("header" "#!/usr/bin/env python
+# -*- coding: UTF8 -*-" nil 1)
     ("im" "import" nil 0)
     ("main" "if __name__ == '__main__':" nil 0)
    ))
@@ -75,6 +79,18 @@
 (define-abbrev-table 'select-tags-table-mode-abbrev-table '())
 
 (define-abbrev-table 'shell-mode-abbrev-table '())
+
+(define-abbrev-table 'sldb-mode-abbrev-table '())
+
+(define-abbrev-table 'slime-connection-list-mode-abbrev-table '())
+
+(define-abbrev-table 'slime-fuzzy-completions-mode-abbrev-table '())
+
+(define-abbrev-table 'slime-inspector-mode-abbrev-table '())
+
+(define-abbrev-table 'slime-thread-control-mode-abbrev-table '())
+
+(define-abbrev-table 'slime-xref-mode-abbrev-table '())
 
 (define-abbrev-table 'snippet-mode-abbrev-table '())
 

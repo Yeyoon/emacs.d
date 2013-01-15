@@ -43,5 +43,6 @@
 (autoload 'pymacs-autoload "pymacs")
 (pymacs-load "ropemacs" "rope-")
 (setq ropemacs-enable-autoimport t)
+(setq pymacs-auto-restart t)
 
 (provide 'init-python-mode)
