@@ -69,7 +69,7 @@
 (define-abbrev-table 'python-mode-abbrev-table
   '(
     ("header" "#!/usr/bin/env python
-# -*- coding: UTF8 -*-" nil 1)
+# -*- coding: utf-8 -*-" nil 1)
     ("im" "import" nil 0)
     ("main" "if __name__ == '__main__':" nil 0)
    ))
