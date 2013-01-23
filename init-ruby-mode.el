@@ -3,6 +3,7 @@
 
 (add-auto-mode 'ruby-mode "\\.rb\\'" "Rakefile\\'" "\.rake\\'" "\.rxml\\'" "\.rjs\\'" ".irbrc\\'" "\.builder\\'" "\.ru\\'" "\.gemspec\\'" "Gemfile\\'")
 
+(setq abbrev-mode t)
 
 (autoload 'run-ruby "inf-ruby" "Run an inferior Ruby process")
 
