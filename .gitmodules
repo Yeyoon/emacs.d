@@ -28,3 +28,6 @@
 [submodule "site-lisp/pyflakes"]
 	path = site-lisp/pyflakes
 	url = git://github.com/kevinw/pyflakes.git
+[submodule "site-lisp/rsense"]
+	path = site-lisp/rsense
+	url = git://github.com/m2ym/rsense.git
