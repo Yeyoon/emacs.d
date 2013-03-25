@@ -1,4 +1,17 @@
-(defcustom preferred-javascript-mode 'js2-mode
+(require-package 'json)
+(require-package 'js3-mode)
+(when (>= emacs-major-version 24)
+  (require-package 'js2-mode))
+(require-package 'js-comint)
+(require-package 'rainbow-delimiters)
+(require-package 'coffee-mode)
+(require-package 'flymake-coffee)
+(require-package 'flymake-jslint)
+(require-package 'flymake-json)
+
+
+(defcustom preferred-javascript-mode
+  (first (remove-if-not #'fboundp '(js2-mode js3-mode)))
   "Javascript mode to use for .js files."
   :type 'symbol
   :group 'programming
@@ -29,7 +42,9 @@
       js2-basic-offset preferred-javascript-indent-level
       js2-indent-on-enter-key t
       js2-auto-indent-p t
-      js2-bounce-indent-p t)
+      js2-bounce-indent-p nil)
+
+(eval-after-load 'js2-mode '(js2-imenu-extras-setup))
 
 ;; js3-mode
 (add-hook 'js3-mode-hook '(lambda () (setq mode-name "JS3")))
@@ -60,15 +75,28 @@
 ;; ---------------------------------------------------------------------------
 
 (setq inferior-js-program-command "js")
-(defun add-inferior-js-keys ()
-  (local-set-key "\C-x\C-e" 'js-send-last-sexp)
-  (local-set-key "\C-\M-x" 'js-send-last-sexp-and-go)
-  (local-set-key "\C-cb" 'js-send-buffer)
-  (local-set-key "\C-c\C-b" 'js-send-buffer-and-go)
-  (local-set-key "\C-cl" 'js-load-file-and-go))
+
+(defvar inferior-js-minor-mode-map (make-sparse-keymap))
+(define-key inferior-js-minor-mode-map "\C-x\C-e" 'js-send-last-sexp)
+(define-key inferior-js-minor-mode-map "\C-\M-x" 'js-send-last-sexp-and-go)
+(define-key inferior-js-minor-mode-map "\C-cb" 'js-send-buffer)
+(define-key inferior-js-minor-mode-map "\C-c\C-b" 'js-send-buffer-and-go)
+(define-key inferior-js-minor-mode-map "\C-cl" 'js-load-file-and-go)
+
+(define-minor-mode inferior-js-keys-mode
+  "Bindings for communicating with an inferior js interpreter."
+  nil " InfJS" inferior-js-minor-mode-map)
 
 (dolist (hook '(js2-mode-hook js3-mode-hook js-mode-hook))
-  (add-hook hook 'add-inferior-js-keys))
+  (add-hook hook 'inferior-js-keys-mode))
+
+;; ---------------------------------------------------------------------------
+;; Alternatively, use skewer-mode
+;; ---------------------------------------------------------------------------
+
+(when (featurep 'js2-mode)
+  (require-package 'skewer-mode)
+  (add-hook 'skewer-mode-hook (lambda () (inferior-js-keys-mode -1))))
 
 
 (provide 'init-javascript)

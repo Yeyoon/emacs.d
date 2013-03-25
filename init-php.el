@@ -1,7 +1,8 @@
-(add-hook 'php-mode-hook 'flymake-php-load)
+(require-package 'php-mode)
+(require-package 'smarty-mode)
+(require-package 'flymake-php)
 
-(autoload 'smarty-mode "smarty-mode" "Smarty Mode" t)
-(add-auto-mode 'smarty-mode "\\.tpl\\'")
+(add-hook 'php-mode-hook 'flymake-php-load)
 
 (global-set-key (kbd "TAB") 'auto-complete)
 

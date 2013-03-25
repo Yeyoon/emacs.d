@@ -1,3 +1,11 @@
+(require-package 'magit)
+(require-package 'git-gutter-fringe)
+(require-package 'git-blame)
+(require-package 'git-commit-mode)
+(require-package 'gitignore-mode)
+(require-package 'gitconfig-mode)
+(require-package 'yagist)
+
 (setq magit-save-some-buffers nil
       magit-process-popup-time 10
       magit-completing-read-function 'magit-ido-completing-read)
@@ -31,7 +39,12 @@
      (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)))
 
 
+;;; Use the fringe version of git-gutter
 
+(eval-after-load 'git-gutter
+  '(require 'git-gutter-fringe))
+
+
 (when *is-a-mac*
   (add-hook 'magit-mode-hook (lambda () (local-unset-key [(meta h)]))))
 
