@@ -1,5 +1,5 @@
 (require-package 'magit)
-(require-package 'git-gutter-fringe)
+;; (require-package 'git-gutter-fringe)
 (require-package 'git-blame)
 (require-package 'git-commit-mode)
 (require-package 'gitignore-mode)

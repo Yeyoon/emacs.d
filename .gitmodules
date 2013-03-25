@@ -28,3 +28,6 @@
 [submodule "site-lisp/ecb"]
 	path = site-lisp/ecb
 	url = git://github.com/emacsmirror/ecb.git
+[submodule "site-lisp/git-gutter-fringe"]
+	path = site-lisp/git-gutter-fringe
+	url = git://github.com/emacsmirror/git-gutter-fringe.git

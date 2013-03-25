@@ -102,8 +102,8 @@
 (require-package 'lua-mode)
 (require-package 'htmlize)
 (require-package 'dsvn)
-(when *is-a-mac*
-  (require-package 'osx-location))
+;; (when *is-a-mac*
+;;   (require-package 'osx-location))
 (require-package 'regex-tool)
 
 ;;----------------------------------------------------------------------------
