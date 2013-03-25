@@ -20,7 +20,7 @@
 (require 'init-frame-hooks)
 ;;(require 'init-xterm)
 ;;(require 'init-themes)
-;;(require 'init-osx-keys)
+(require 'init-osx-keys)
 ;;(require 'init-gui-frames)
 (require 'init-maxframe)
 ;;(require 'init-proxies)
@@ -67,13 +67,15 @@
 ;;(require 'init-haskell)
 (require 'init-ruby-mode)
 ;;(require 'init-rails)
-(require 'init-auctex)
+;; (require 'init-auctex)
 (require 'init-modes)
 
 (require 'init-lisp)
 (require 'init-slime)
 ;;(require 'init-clojure)
 (require 'init-common-lisp)
+
+;;; (require 'init-ecb)
 
 (when *spell-check-support-enabled*
   (require 'init-spelling))

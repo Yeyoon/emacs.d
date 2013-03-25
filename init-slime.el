@@ -34,6 +34,4 @@
      (eval-after-load 'auto-complete
        '(add-to-list 'ac-modes 'slime-repl-mode))))
 
-
-
 (provide 'init-slime)

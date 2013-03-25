@@ -19,15 +19,12 @@
 [submodule "site-lisp/rope"]
 	path = site-lisp/rope
 	url = git://github.com/cataliniacob/rope.git
-[submodule "site-lisp/pylookup"]
-	path = site-lisp/pylookup
-	url = git://github.com/tsgates/pylookup.git
-[submodule "site-lisp/w3"]
-	path = site-lisp/w3
-	url = git@github.com:blueabysm/w3.git
 [submodule "site-lisp/pyflakes"]
 	path = site-lisp/pyflakes
 	url = git://github.com/kevinw/pyflakes.git
 [submodule "site-lisp/rsense"]
 	path = site-lisp/rsense
 	url = git://github.com/m2ym/rsense.git
+[submodule "site-lisp/ecb"]
+	path = site-lisp/ecb
+	url = git://github.com/emacsmirror/ecb.git

@@ -8,6 +8,9 @@
 ;; php.example
 (add-to-list 'auto-mode-alist '("\\.php.example$" . php-mode))
 
+;; php
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+
 ;; html mode for tpl
 (add-to-list 'auto-mode-alist '("\\.tpl$" . html-mode))
 

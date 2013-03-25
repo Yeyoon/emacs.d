@@ -20,7 +20,8 @@
  '(font-lock-constant-face ((t (:foreground "brightred"))))
  '(font-lock-doc-face ((t (:inherit font-lock-string-face :foreground "blue"))))
  '(font-lock-function-name-face ((t (:foreground "brightblue"))))
- '(font-lock-keyword-face ((t (:foreground "brightyellow")))))
+ '(font-lock-keyword-face ((t (:foreground "brightyellow"))))
+ '(region ((t (:background "#444444" :foreground "white")))))
 ;; disable bell alert
 (setq ring-bell-function 'ignore)
 
@@ -35,7 +36,7 @@
     (insert (decode-coding-string (string-make-unibyte text) coding-system))))
 
 ;; truncate line
-(toggle-truncate-lines)
+;; (toggle-truncate-lines)
 
 ;; Weather Report --------------------------------------------------
 ;; this api key is owned by Lei Wang (blueabysm@gmail.com)
