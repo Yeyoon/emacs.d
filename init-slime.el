@@ -1,11 +1,14 @@
 ;; (require-package 'slime)
-;; (require-package 'slime-fuzzy)
-;; (require-package 'slime-repl)
-;; (require-package 'ac-slime)
-;; (require-package 'hippie-expand-slime)
+(require 'slime)
+(require-package 'slime-fuzzy)
+(require-package 'slime-repl)
+(require-package 'ac-slime)
+(require-package 'hippie-expand-slime)
 
 
 (autoload 'slime-fuzzy-init "slime-fuzzy" "" nil)
+(add-to-list 'load-path "~/.emacs.d/site-lisp/slime/contrib")
+
 (eval-after-load 'slime-fuzzy
   '(require 'slime-repl))
 
