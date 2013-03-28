@@ -1,8 +1,8 @@
-(require-package 'slime)
-(require-package 'slime-fuzzy)
-(require-package 'slime-repl)
-(require-package 'ac-slime)
-(require-package 'hippie-expand-slime)
+;; (require-package 'slime)
+;; (require-package 'slime-fuzzy)
+;; (require-package 'slime-repl)
+;; (require-package 'ac-slime)
+;; (require-package 'hippie-expand-slime)
 
 
 (autoload 'slime-fuzzy-init "slime-fuzzy" "" nil)

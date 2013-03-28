@@ -28,6 +28,9 @@
 [submodule "site-lisp/ecb"]
 	path = site-lisp/ecb
 	url = git://github.com/emacsmirror/ecb.git
-[submodule "site-lisp/git-gutter-fringe"]
-	path = site-lisp/git-gutter-fringe
-	url = git://github.com/emacsmirror/git-gutter-fringe.git
+[submodule "site-lisp/git-gutter"]
+	path = site-lisp/git-gutter
+	url = git://github.com/syohex/emacs-git-gutter.git
+[submodule "site-lisp/slime"]
+	path = site-lisp/slime
+	url = git://github.com/nablaone/slime.git
