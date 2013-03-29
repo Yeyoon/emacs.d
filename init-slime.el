@@ -1,5 +1,4 @@
-;; (require-package 'slime)
-(require 'slime)
+(require-package 'slime)
 (require-package 'slime-fuzzy)
 (require-package 'slime-repl)
 (require-package 'ac-slime)
@@ -7,8 +6,6 @@
 
 
 (autoload 'slime-fuzzy-init "slime-fuzzy" "" nil)
-(add-to-list 'load-path "~/.emacs.d/site-lisp/slime/contrib")
-
 (eval-after-load 'slime-fuzzy
   '(require 'slime-repl))
 
@@ -43,5 +40,7 @@
 
      (eval-after-load 'auto-complete
        '(add-to-list 'ac-modes 'slime-repl-mode))))
+
+
 
 (provide 'init-slime)
