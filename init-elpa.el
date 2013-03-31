@@ -78,7 +78,8 @@ ARCHIVE is the string name of the package archive.")
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
 (defvar melpa-exclude-packages
-  '(slime)
+  ;;'(slime)
+  nil
   "Don't install Melpa versions of these packages.")
 
 ;; Don't take Melpa versions of certain packages
