@@ -15,12 +15,15 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(flymake-errline ((t (:background "blue" :foreground "brightwhite"))))
+ '(font-lock-builtin-face ((t (:foreground "yellow"))))
  '(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
- '(font-lock-comment-face ((t (:foreground "color-39"))))
+ '(font-lock-comment-face ((t (:foreground "color-237"))))
  '(font-lock-constant-face ((t (:foreground "purple4"))))
  '(font-lock-doc-face ((t (:inherit font-lock-string-face :foreground "blue"))))
- '(font-lock-function-name-face ((t (:foreground "RoyalBlue4"))))
- '(font-lock-keyword-face ((t (:foreground "green4"))))
+ '(font-lock-function-name-face ((t (:foreground "color-129"))))
+ '(font-lock-keyword-face ((t (:foreground "blue"))))
+ '(font-lock-string-face ((t (:foreground "color-202"))))
+ '(font-lock-variable-name-face ((t (:foreground "brightred"))))
  '(region ((t (:background "#444444" :foreground "white")))))
 ;; disable bell alert
 (setq ring-bell-function 'ignore)

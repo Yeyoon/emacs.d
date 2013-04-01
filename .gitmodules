@@ -31,3 +31,6 @@
 [submodule "site-lisp/git-gutter"]
 	path = site-lisp/git-gutter
 	url = git://github.com/syohex/emacs-git-gutter.git
+[submodule "site-lisp/slime"]
+	path = site-lisp/slime
+	url = git://github.com/nablaone/slime.git
