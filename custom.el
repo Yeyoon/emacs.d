@@ -64,3 +64,13 @@
 
 (when *is-cocoa-emacs*
     (tool-bar-mode -1))
+
+;; defadvice
+(defadvice message (after message-tail activate)
+  "goto point max after a message"
+  (with-current-buffer "*Messages*"
+    (goto-char (point-max))
+    (walk-windows (lambda (window)
+                    (if (string-equal (buffer-name (window-buffer window)) "*Messages*")
+                        (set-window-point window (point-max))))
+                  nil t)))
