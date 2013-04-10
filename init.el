@@ -45,7 +45,6 @@
 (require 'init-abbrev)
 (require 'init-vc)
 (require 'init-look)
-;;(require 'init-w3)
 
 (require 'init-recentf)
 (require 'init-ido)
@@ -95,6 +94,7 @@
 
 (require 'init-marmalade)
 (require 'init-misc)
+(require 'init-w3m)
 
 ;; Extra packages which don't require any configuration
 
@@ -109,9 +109,9 @@
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
 ;;----------------------------------------------------------------------------
-;; (require 'server)
-;; (unless (server-running-p)
-;;   (server-start))
+(require 'server)
+(unless (server-running-p)
+  (server-start))
 
 
 ;;----------------------------------------------------------------------------

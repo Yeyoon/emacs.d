@@ -77,6 +77,11 @@ ARCHIVE is the string name of the package archive.")
 
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
+;;------------------------------------------------------------------------------
+;; Enable gnu elpa source
+;;------------------------------------------------------------------------------
+(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
+
 (defvar melpa-exclude-packages
   ;;'(slime)
   nil

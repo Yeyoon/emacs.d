@@ -76,5 +76,13 @@
     (compile (concat "git svn "
                      (ido-completing-read "git-svn command: " git-svn--available-commands nil t)))))
 
+;;----------------------------------------------------------------------------
+;; keyboard shortcuts for git-gutter
+;;----------------------------------------------------------------------------
+(global-set-key (kbd "C-c C-n") 'git-gutter:next-diff)
+(global-set-key (kbd "C-c C-p") 'git-gutter:previous-diff)
+(global-set-key (kbd "C-c C-o") 'git-gutter:popup-diff)
+(global-set-key (kbd "C-c C-N") 'git-gutter:next-hunk)
+(global-set-key (kbd "C-c C-P") 'git-gutter:previous-hunk)
 
 (provide 'init-git)

@@ -3,6 +3,7 @@
 (require-package 'flymake-php)
 
 (add-hook 'php-mode-hook 'flymake-php-load)
+(global-set-key (kbd "C-c h") 'php-search-documentation)
 
 (global-set-key (kbd "TAB") 'auto-complete)
 

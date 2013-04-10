@@ -16,14 +16,16 @@
  ;; If there is more than one, they won't work right.
  '(flymake-errline ((t (:background "blue" :foreground "brightwhite"))))
  '(font-lock-builtin-face ((t (:foreground "yellow"))))
- '(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
- '(font-lock-comment-face ((t (:foreground "color-237"))))
+ '(font-lock-comment-delimiter-face ((t nil)))
+ '(font-lock-comment-face ((t (:foreground "controlShadowColor"))))
  '(font-lock-constant-face ((t (:foreground "purple4"))))
  '(font-lock-doc-face ((t (:inherit font-lock-string-face :foreground "blue"))))
  '(font-lock-function-name-face ((t (:foreground "color-129"))))
  '(font-lock-keyword-face ((t (:foreground "blue"))))
  '(font-lock-string-face ((t (:foreground "color-202"))))
  '(font-lock-variable-name-face ((t (:foreground "brightred"))))
+ '(message-header-subject ((t (:foreground "brightgreen" :weight bold))))
+ '(message-header-to ((t (:foreground "brightblue" :weight bold))))
  '(region ((t (:background "#444444" :foreground "white")))))
 ;; disable bell alert
 (setq ring-bell-function 'ignore)
@@ -58,9 +60,6 @@
 (defun set-argument-indentation-style ()
   (c-set-offset 'arglist-intro '+))
 (add-hook 'c-mode 'set-argument-indentation-style)
-
-;; `browse-url-w3'
-;;(setq browse-url-browser-function 'browse-url-w3)
 
 (when *is-cocoa-emacs*
     (tool-bar-mode -1))
