@@ -1,6 +1,9 @@
 (require-package 'unfill)
 (require-package 'whole-line-or-region)
 
+(when (fboundp 'electric-pair-mode)
+  (electric-pair-mode))
+
 ;;----------------------------------------------------------------------------
 ;; Some basic preferences
 ;;----------------------------------------------------------------------------
@@ -156,6 +159,7 @@
 ;;----------------------------------------------------------------------------
 (require-package 'page-break-lines)
 (global-page-break-lines-mode)
+(diminish 'page-break-lines-mode)
 
 ;;----------------------------------------------------------------------------
 ;; Fill column indicator

@@ -28,7 +28,11 @@
                 sass-mode yaml-mode csv-mode espresso-mode haskell-mode
                 html-mode nxml-mode sh-mode smarty-mode clojure-mode
                 lisp-mode textile-mode markdown-mode tuareg-mode
+<<<<<<< HEAD
                 js3-mode css-mode less-css-mode objc-mode))
+=======
+                js3-mode css-mode less-css-mode sql-mode ielm-mode))
+>>>>>>> ae685b42248509208a37d45fc1e6851431108e94
   (add-to-list 'ac-modes mode))
 
 

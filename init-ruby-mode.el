@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+(require-package 'ruby-mode)
+(require-package 'ruby-hash-syntax)
+(require-package 'flymake-ruby)
+(require-package 'rinari)
+(require-package 'ruby-compilation)
+(require-package 'inf-ruby)
+(require-package 'robe)
+(require-package 'yari)
+(require-package 'yaml-mode)
+(require-package 'haml-mode)
+(require-package 'mmm-mode)
+
+
+>>>>>>> ae685b42248509208a37d45fc1e6851431108e94
 (eval-after-load 'rinari
   '(diminish 'rinari-minor-mode "Rin"))
 
@@ -42,14 +58,30 @@
 ;;----------------------------------------------------------------------------
 (defun sanityinc/ensure-mmm-erb-loaded ()
   (require 'mmm-erb))
-(dolist (hook (list 'html-mode-hook 'nxml-mode-hook 'yaml-mode-hook))
-  (add-hook hook 'sanityinc/ensure-mmm-erb-loaded))
 
-(dolist (mode (list 'html-mode 'html-erb-mode 'nxml-mode))
-  (mmm-add-mode-ext-class mode "\\.r?html\\(\\.erb\\)?\\'" 'html-js)
-  (mmm-add-mode-ext-class mode "\\.r?html\\(\\.erb\\)?\\'" 'html-css)
+(require 'derived)
+
+(defun sanityinc/set-up-mode-for-erb (mode)
+  (add-hook (derived-mode-hook-name mode) 'sanityinc/ensure-mmm-erb-loaded)
   (mmm-add-mode-ext-class mode "\\.erb\\'" 'erb))
 
+<<<<<<< HEAD
+=======
+(let ((html-erb-modes '(html-mode html-erb-mode nxml-mode)))
+  (dolist (mode html-erb-modes)
+    (sanityinc/set-up-mode-for-erb mode)
+    (mmm-add-mode-ext-class mode "\\.r?html\\(\\.erb\\)?\\'" 'html-js)
+    (mmm-add-mode-ext-class mode "\\.r?html\\(\\.erb\\)?\\'" 'html-css)))
+
+(mapc 'sanityinc/set-up-mode-for-erb
+      '(coffee-mode js-mode js2-mode js3-mode markdown-mode textile-mode))
+
+(require-package 'tagedit)
+(eval-after-load "sgml-mode"
+  '(progn
+     (tagedit-add-paredit-like-keybindings)))
+
+>>>>>>> ae685b42248509208a37d45fc1e6851431108e94
 (mmm-add-mode-ext-class 'html-erb-mode "\\.jst\\.ejs\\'" 'ejs)
 
 (add-to-list 'auto-mode-alist '("\\.r?html\\(\\.erb\\)?\\'" . html-erb-mode))
@@ -82,6 +114,7 @@
 (add-hook 'ruby-mode-hook (lambda () (local-set-key [f6] 'recompile)))
 
 
+<<<<<<< HEAD
 
 ;;----------------------------------------------------------------------------
 ;; Yaml
@@ -103,5 +136,7 @@
           (lambda ()
             (add-to-list 'ac-sources 'ac-source-rsense-method)
             (add-to-list 'ac-sources 'ac-source-rsense-constant)))
+=======
+>>>>>>> ae685b42248509208a37d45fc1e6851431108e94
 
 (provide 'init-ruby-mode)

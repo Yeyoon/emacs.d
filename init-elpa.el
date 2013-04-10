@@ -1,6 +1,4 @@
-;;------------------------------------------------------------------------------
-;; Find and load the correct package.el
-;;------------------------------------------------------------------------------
+;;; Find and load the correct package.el
 
 ;; When switching between Emacs 23 and 24, we always use the bundled package.el in Emacs 24
 (let ((package-el-site-lisp-dir (expand-file-name "~/.emacs.d/site-lisp/package")))
@@ -12,6 +10,7 @@
 (require 'package)
 
 
+<<<<<<< HEAD
 ;;------------------------------------------------------------------------------
 ;; Patch up annoying package.el quirks
 ;;------------------------------------------------------------------------------
@@ -26,6 +25,10 @@
 ;;------------------------------------------------------------------------------
 ;; Add support to package.el for pre-filtering available packages
 ;;------------------------------------------------------------------------------
+=======
+
+;;; Add support to package.el for pre-filtering available packages
+>>>>>>> ae685b42248509208a37d45fc1e6851431108e94
 
 (defvar package-filter-function nil
   "Optional predicate function used to internally filter packages used by package.el.
@@ -45,6 +48,7 @@ ARCHIVE is the string name of the package archive.")
     ad-do-it))
 
 
+<<<<<<< HEAD
 ;;------------------------------------------------------------------------------
 ;; On-demand installation of packages
 ;;------------------------------------------------------------------------------
@@ -63,6 +67,10 @@ ARCHIVE is the string name of the package archive.")
 ;;------------------------------------------------------------------------------
 ;; Standard package repositories
 ;;------------------------------------------------------------------------------
+=======
+
+;;; Standard package repositories
+>>>>>>> ae685b42248509208a37d45fc1e6851431108e94
 
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
@@ -70,13 +78,13 @@ ARCHIVE is the string name of the package archive.")
 ;; use it.
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 
+(when (< emacs-major-version 24)
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
-;;------------------------------------------------------------------------------
-;; Also use Melpa for some packages built straight from VC
-;;------------------------------------------------------------------------------
-
+;;; Also use Melpa for most packages
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
+<<<<<<< HEAD
 ;;------------------------------------------------------------------------------
 ;; Enable gnu elpa source
 ;;------------------------------------------------------------------------------
@@ -88,17 +96,35 @@ ARCHIVE is the string name of the package archive.")
   "Don't install Melpa versions of these packages.")
 
 ;; Don't take Melpa versions of certain packages
+=======
+;; But don't take Melpa versions of certain packages
+>>>>>>> ae685b42248509208a37d45fc1e6851431108e94
 (setq package-filter-function
       (lambda (package version archive)
         (and
          (not (memq package '(eieio)))
          (or (not (string-equal archive "melpa"))
-             (not (memq package melpa-exclude-packages))))))
+             (not (memq package '(slime)))))))
 
 
-;;------------------------------------------------------------------------------
-;; Fire up package.el and ensure the following packages are installed.
-;;------------------------------------------------------------------------------
+
+;;; On-demand installation of packages
+
+(defun require-package (package &optional min-version no-refresh)
+  "Install given PACKAGE, optionally requiring MIN-VERSION.
+If NO-REFRESH is non-nil, the available package lists will not be
+re-downloaded in order to locate PACKAGE."
+  (if (package-installed-p package min-version)
+      t
+    (if (or (assoc package package-archive-contents) no-refresh)
+        (package-install package)
+      (progn
+        (package-refresh-contents)
+        (require-package package min-version t)))))
+
+
+
+;;; Fire up package.el
 
 (package-initialize)
 

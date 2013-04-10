@@ -82,6 +82,7 @@
 ;; (require 'init-auctex)
 (require 'init-modes)
 
+(require 'init-paredit)
 (require 'init-lisp)
 (require 'init-slime)
 ;;(require 'init-clojure)
