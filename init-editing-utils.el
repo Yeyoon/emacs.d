@@ -1,6 +1,9 @@
 (require-package 'unfill)
 (require-package 'whole-line-or-region)
 
+(when (fboundp 'electric-pair-mode)
+  (electric-pair-mode))
+
 ;;----------------------------------------------------------------------------
 ;; Some basic preferences
 ;;----------------------------------------------------------------------------
@@ -156,6 +159,7 @@
 ;;----------------------------------------------------------------------------
 (require-package 'page-break-lines)
 (global-page-break-lines-mode)
+(diminish 'page-break-lines-mode)
 
 ;;----------------------------------------------------------------------------
 ;; Fill column indicator
@@ -257,6 +261,12 @@
           ((inhibit-field-text-motion t))
         (sort-subr nil 'forward-line 'end-of-line nil nil
                    (lambda (s1 s2) (eq (random 2) 0)))))))
+
+
+
+(require-package 'visual-regexp)
+(global-set-key [remap query-replace-regexp] 'vr/query-replace)
+(global-set-key [remap replace-regexp] 'vr/replace)
 
 
 (provide 'init-editing-utils)

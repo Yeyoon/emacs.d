@@ -5,20 +5,15 @@
 (require-package 'gitignore-mode)
 (require-package 'gitconfig-mode)
 (require-package 'yagist)
+(require-package 'github-browse-file)
 
-(setq magit-save-some-buffers nil
-      magit-process-popup-time 10
-      magit-completing-read-function 'magit-ido-completing-read)
-
-(defun magit-status-somedir ()
-  (interactive)
-  (let ((current-prefix-arg t))
-    (magit-status default-directory)))
+(setq-default
+ magit-save-some-buffers nil
+ magit-process-popup-time 10
+ magit-diff-refine-hunk t
+ magit-completing-read-function 'magit-ido-completing-read)
 
 (global-set-key [(meta f12)] 'magit-status)
-(global-set-key [(shift meta f12)] 'magit-status-somedir)
-
-
 
 (eval-after-load 'magit
   '(progn
@@ -34,12 +29,21 @@
        (interactive)
        (kill-buffer)
        (when (get-register :magit-fullscreen)
-         (jump-to-register :magit-fullscreen)))
+         (ignore-errors
+           (jump-to-register :magit-fullscreen))))
 
      (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)))
 
 
-;;; Use the normal version of git-gutter
+;;; When we start working on git-backed files, use git-wip if available
+
+(eval-after-load 'vc-git
+  '(progn
+     (global-magit-wip-save-mode)
+     (diminish 'magit-wip-save-mode)))
+
+
+;;; Use the fringe version of git-gutter
 
 (require 'git-gutter)
 (global-git-gutter-mode t)
@@ -48,13 +52,13 @@
 (when *is-a-mac*
   (add-hook 'magit-mode-hook (lambda () (local-unset-key [(meta h)]))))
 
+
+;;; git-svn support
+
 (eval-after-load 'magit
   '(progn
      (require 'magit-svn)))
 
-;;----------------------------------------------------------------------------
-;; git-svn conveniences
-;;----------------------------------------------------------------------------
 (eval-after-load 'compile
   '(progn
      (dolist (defn (list '(git-svn-updated "^\t[A-Z]\t\\(.*\\)$" 1 nil nil 0 1)
