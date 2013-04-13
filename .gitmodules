@@ -1,3 +1,0 @@
-[submodule "site-lisp/emacs-w3m"]
-	path = site-lisp/emacs-w3m
-	url = git://github.com/emacs-pkg-mirrors/emacs-w3m.git
