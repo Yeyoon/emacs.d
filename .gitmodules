@@ -1,33 +1,3 @@
-[submodule "site-lisp/auto-complete"]
-           path = site-lisp/auto-complete
-           url = https://github.com/purcell/auto-complete.git
-[submodule "site-lisp/html5-el"]
-	path = site-lisp/html5-el
-	url = https://github.com/hober/html5-el.git
-[submodule "site-lisp/auto-complete-auctex"]
-	path = site-lisp/auto-complete-auctex
-	url = git://github.com/monsanto/auto-complete-auctex.git
-[submodule "site-lisp/pymacs"]
-	path = site-lisp/pymacs
-	url = git://github.com/pinard/Pymacs.git
-[submodule "site-lisp/ropemacs"]
-	path = site-lisp/ropemacs
-	url = git://github.com/cataliniacob/ropemacs.git
-[submodule "site-lisp/ropemode"]
-	path = site-lisp/ropemode
-	url = git://github.com/cataliniacob/ropemode.git
-[submodule "site-lisp/rope"]
-	path = site-lisp/rope
-	url = git://github.com/cataliniacob/rope.git
-[submodule "site-lisp/pyflakes"]
-	path = site-lisp/pyflakes
-	url = git://github.com/kevinw/pyflakes.git
-[submodule "site-lisp/rsense"]
-	path = site-lisp/rsense
-	url = git://github.com/m2ym/rsense.git
-[submodule "site-lisp/ecb"]
-	path = site-lisp/ecb
-	url = git://github.com/emacsmirror/ecb.git
-[submodule "site-lisp/git-gutter"]
-	path = site-lisp/git-gutter
-	url = git://github.com/syohex/emacs-git-gutter.git
+[submodule "site-lisp/emacs-w3m"]
+	path = site-lisp/emacs-w3m
+	url = git://github.com/emacs-pkg-mirrors/emacs-w3m.git

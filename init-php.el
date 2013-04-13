@@ -4,7 +4,21 @@
 
 (add-hook 'php-mode-hook 'flymake-php-load)
 
-(global-set-key (kbd "TAB") 'auto-complete)
+(add-auto-mode
+ 'php-mode
+ (concat "\\."
+         (regexp-opt
+          '("php" "php.example" "inc"))
+         "\\'"))
 
-(setq ruby-deep-indent-paren nil)
+(defun browse-url-in-other-window (url &optional newwin)
+  "Open url in other window"
+  (message "Opening PHP online manual...")
+  (let ((pop-up-windows t))
+    (if (one-window-p) (split-window-sensibly (frame-selected-window)))
+    (other-window 1)
+    (w3m-browse-url url newwin)))
+
+(setq browse-url-browser-function 'browse-url-in-other-window)
+
 (provide 'init-php)

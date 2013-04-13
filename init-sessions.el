@@ -1,6 +1,6 @@
 ;; save a list of open files in ~/.emacs.d/.emacs.desktop
 (setq desktop-path '("~/.emacs.d"))
-(desktop-save-mode 1)
+(desktop-save-mode nil)
 (defadvice desktop-read (around trace-desktop-errors)
   (let ((debug-on-error t))
     ad-do-it))

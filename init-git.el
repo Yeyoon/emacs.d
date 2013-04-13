@@ -1,5 +1,7 @@
 (require-package 'magit)
-;; (require-package 'git-gutter-fringe)
+(if *is-cocoa-emacs*
+    (require-package 'git-gutter-fringe)
+  (require-package 'git-gutter))
 (require-package 'git-blame)
 (require-package 'git-commit-mode)
 (require-package 'gitignore-mode)
@@ -41,13 +43,14 @@
   '(progn
      (global-magit-wip-save-mode)
      (diminish 'magit-wip-save-mode)))
-
-
-;;; Use the fringe version of git-gutter
-
-(require 'git-gutter)
 (global-git-gutter-mode t)
 
+
+;;; Use the fringe version of git-gutter in cocoa Emacs, else use the original one
+(if *is-cocoa-emacs*
+    (eval-after-load 'git-gutter '(require 'git-gutter-fringe))
+  (eval-after-load 'git-gutter '(require 'git-gutter))
+ )
 
 (when *is-a-mac*
   (add-hook 'magit-mode-hook (lambda () (local-unset-key [(meta h)]))))
@@ -80,5 +83,8 @@
     (compile (concat "git svn "
                      (ido-completing-read "git-svn command: " git-svn--available-commands nil t)))))
 
+;; git gutter keyboard shortcuts
+(global-set-key (kbd "C-c C-p") 'git-gutter:previous-hunk)
+(global-set-key (kbd "C-c C-n") 'git-gutter:next-hunk)
 
 (provide 'init-git)

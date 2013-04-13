@@ -3,6 +3,7 @@
 
 (require-package 'pretty-mode)
 (autoload 'turn-on-pretty-mode "pretty-mode")
+(global-pretty-mode t)
 
 ;; ----------------------------------------------------------------------------
 ;; Hippie-expand
