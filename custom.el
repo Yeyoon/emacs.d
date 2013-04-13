@@ -42,12 +42,15 @@
   (c-set-offset 'arglist-intro '+))
 (add-hook 'c-mode 'set-argument-indentation-style)
 
-;; `browse-url-w3'
-;;(setq browse-url-browser-function 'browse-url-w3)
-
 (when *is-cocoa-emacs*
-    (tool-bar-mode -1)
-    (toggle-scroll-bar nil))
+    (tool-bar-mode -1))
 
-;; todochiku `terminal-notifier-path'
-(setq terminal-notifier-path "/usr/bin/terminal-notifier")
+;; defadvice
+(defadvice message (after message-tail activate)
+  "goto point max after a message"
+  (with-current-buffer "*Messages*"
+    (goto-char (point-max))
+    (walk-windows (lambda (window)
+                    (if (string-equal (buffer-name (window-buffer window)) "*Messages*")
+                        (set-window-point window (point-max))))
+                  nil t)))
