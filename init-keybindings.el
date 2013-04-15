@@ -17,4 +17,7 @@
 (when window-system
   (global-set-key (kbd "C-x C-c") 'ask-before-closing))
 
+(require-package 'highlight-symbol)
+(global-set-key (kbd "C-c C-m") 'highlight-symbol-at-point)
+
 (provide 'init-keybindings)
