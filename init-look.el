@@ -32,7 +32,9 @@
 
 ;; fullscreen after startup
 (if *is-cocoa-emacs*
-    (if (fboundp 'ns-toggle-screen)
-        (ns-toggle-fullscreen)))
+    (progn
+     (if (fboundp 'ns-toggle-screen)
+         (ns-toggle-fullscreen))
+     (set-frame-parameter nil 'alpha 90)))
 
 (provide 'init-look)
