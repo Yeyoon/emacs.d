@@ -84,7 +84,8 @@
                      (ido-completing-read "git-svn command: " git-svn--available-commands nil t)))))
 
 ;; git gutter keyboard shortcuts
-(global-set-key (kbd "C-c C-p") 'git-gutter:previous-hunk)
-(global-set-key (kbd "C-c C-n") 'git-gutter:next-hunk)
+(global-set-key (kbd "C-c C-,") 'git-gutter:previous-hunk)
+(global-set-key (kbd "C-c C-.") 'git-gutter:next-hunk)
+(global-set-key (kbd "C-c C-o") 'git-gutter:popup-hunk)
 
 (provide 'init-git)

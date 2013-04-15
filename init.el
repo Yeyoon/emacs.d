@@ -128,7 +128,7 @@
 (require 'init-w3m)
 (require 'init-php)
 (require 'init-google-pkgs)
-(require 'init-auctex)
+;;(require 'init-auctex)
 (require 'init-abbrev)
 
 ;; Local Variables:

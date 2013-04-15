@@ -32,6 +32,7 @@
 
 ;; fullscreen after startup
 (if *is-cocoa-emacs*
-    (ns-toggle-fullscreen-internal))
+    (if (fboundp 'ns-toggle-screen)
+        (ns-toggle-fullscreen)))
 
 (provide 'init-look)
