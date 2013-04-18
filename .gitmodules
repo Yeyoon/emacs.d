@@ -1,0 +1,3 @@
+[submodule "site-lisp/douban-fm"]
+	path = site-lisp/douban-fm
+	url = git://github.com/blueabysm/douban-fm.git
