@@ -3,7 +3,6 @@
 
 (require-package 'pretty-mode)
 (autoload 'turn-on-pretty-mode "pretty-mode")
-(global-pretty-mode t)
 
 ;; ----------------------------------------------------------------------------
 ;; Hippie-expand
@@ -142,7 +141,6 @@
 (defadvice vc-revert-buffer-internal (around sanityinc/reverting activate)
   (let ((sanityinc/vc-reverting t))
     ad-do-it))
-
 
 
 

@@ -6,7 +6,8 @@
  '(LaTeX-command "pdflatex")
  '(custom-safe-themes (quote ("4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default)))
  '(gud-gdb-command-name "gdb --annotate=1")
- '(large-file-warning-threshold nil))
+ '(large-file-warning-threshold nil)
+ '(session-use-package t nil (session)))
 
 ;; disable bell alert
 (setq ring-bell-function 'ignore)
@@ -54,3 +55,19 @@
                     (if (string-equal (buffer-name (window-buffer window)) "*Messages*")
                         (set-window-point window (point-max))))
                   nil t)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "gray84" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 130 :width normal :foundry "apple" :family "Monaco"))))
+ '(flymake-errline ((t (:background "blue" :foreground "#fcfcfc"))))
+ '(font-lock-builtin-face ((t (:foreground "DarkOrange1"))))
+ '(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
+ '(font-lock-comment-face ((t (:foreground "gray34"))))
+ '(font-lock-constant-face ((t (:foreground "yellow1"))))
+ '(font-lock-doc-face ((t (:inherit font-lock-string-face :foreground "purple1"))))
+ '(font-lock-function-name-face ((t (:foreground "lime green"))))
+ '(font-lock-keyword-face ((t (:foreground "RoyalBlue1"))))
+ '(font-lock-string-face ((t (:foreground "SlateBlue1"))))
+ '(region ((t (:background "#444444" :foreground "white")))))

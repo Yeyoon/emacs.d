@@ -31,10 +31,12 @@
           (lambda () (setq truncate-lines nil)))
 
 ;; fullscreen after startup
-(if *is-cocoa-emacs*
+(if window-system
     (progn
      (if (fboundp 'ns-toggle-screen)
          (ns-toggle-fullscreen))
      (set-frame-parameter nil 'alpha 90)))
+
+(global-pretty-mode t)
 
 (provide 'init-look)
