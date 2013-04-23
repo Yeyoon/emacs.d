@@ -20,6 +20,7 @@
 (set-face-foreground 'mode-line-inactive "#CCCCCC")
 (set-face-background 'mode-line "#FFFFFF")
 (set-face-foreground 'mode-line "#003300")
+(set-face-attribute 'mode-line nil :family "Monaco" :height 120 :weight 'normal)
 
 ;; region background
 (set-face-background 'region "#444444")

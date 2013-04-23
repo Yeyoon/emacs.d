@@ -5,6 +5,7 @@
 (add-hook 'php-mode-hook 'flymake-php-load)
 (global-set-key (kbd "C-c h") 'php-search-documentation)
 
+(paredit-mode)
 (add-auto-mode
  'php-mode
  (concat "\\."

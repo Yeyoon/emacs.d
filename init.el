@@ -125,7 +125,7 @@
 ;;----------------------------------------------------------------------------
 (require 'init-locales)
 (require 'init-keybindings)
-(require 'init-google-pkgs)
+;;(require 'init-google-pkgs)
 ;;(require 'init-auctex)
 (require 'init-abbrev)
 
