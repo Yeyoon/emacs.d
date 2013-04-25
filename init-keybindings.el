@@ -2,6 +2,8 @@
 (global-set-key (kbd "M-n") 'scroll-other-window)
 (global-set-key (kbd "M-p") 'scroll-other-window-down)
 (global-set-key (kbd "M-`") 'other-window)
+(global-set-key (kbd "C-2") 'cua-set-mark)
+(global-set-key (kbd "C-c i") 'imenu)
 
 (global-set-key (kbd "C-/") 'undo)
 

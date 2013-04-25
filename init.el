@@ -31,12 +31,12 @@
 ;;(require-package 'mwe-log-commands)
 
 (require 'init-frame-hooks)
-(require 'init-xterm)
+;;(require 'init-xterm)
 ;;(require 'init-themes)
 (require 'init-osx-keys)
 (require 'init-gui-frames)
-(require 'init-maxframe)
-(require 'init-proxies)
+;;(require 'init-maxframe)
+;;(require 'init-proxies)
 (require 'init-dired)
 (require 'init-isearch)
 (require 'init-uniquify)
@@ -49,9 +49,9 @@
 (require 'init-auto-complete)
 (require 'init-windows)
 (require 'init-sessions)
-(require 'init-fonts)
+;;(require 'init-fonts)
 (require 'init-mmm)
-(require 'init-growl)
+;;(require 'init-growl)
 
 (require 'init-editing-utils)
 
@@ -59,22 +59,22 @@
 (require 'init-git)
 
 (require 'init-crontab)
-(require 'init-textile)
+;;(require 'init-textile)
 (require 'init-markdown)
 (require 'init-csv)
 ;;(require 'init-erlang)
 (require 'init-javascript)
 (require 'init-sh)
-(require 'init-w3m)
+;;(require 'init-w3m)
 (require 'init-php)
 (require 'init-org)
 (require 'init-nxml)
 (require 'init-css)
-;;(require 'init-haml)
-(require 'init-python-mode)
-(require 'init-haskell)
+(require 'init-haml)
+;;(require 'init-python-mode)
+;;(require 'init-haskell)
 (require 'init-ruby-mode)
-;;(require 'init-rails)
+(require 'init-rails)
 
 (require 'init-paredit)
 (require 'init-lisp)
@@ -94,8 +94,8 @@
 ;;(require-package 'lua-mode)
 (require-package 'htmlize)
 ;;(require-package 'dsvn)
-(when *is-a-mac*
-  (require-package 'osx-location))
+;; (when *is-a-mac*
+;;   (require-package 'osx-location))
 (require-package 'regex-tool)
 
 ;;----------------------------------------------------------------------------
@@ -132,6 +132,7 @@
 ;; multimedia
 (require 'init-douban)
 (require 'init-look)
+(require 'init-yasnippet)
 ;; Local Variables:
 ;; coding: utf-8
 ;; no-byte-compile: t
