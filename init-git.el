@@ -6,8 +6,6 @@
 (require-package 'git-commit-mode)
 (require-package 'gitignore-mode)
 (require-package 'gitconfig-mode)
-(require-package 'yagist)
-(require-package 'github-browse-file)
 
 (setq-default
  magit-save-some-buffers nil
@@ -64,7 +62,7 @@
 
 ;;; git-svn support
 
-(eval-after-load 'magit
+(eval-after-load 'magit-key-mode
   '(progn
      (require 'magit-svn)))
 
@@ -72,14 +70,13 @@
   '(progn
      (dolist (defn (list '(git-svn-updated "^\t[A-Z]\t\\(.*\\)$" 1 nil nil 0 1)
                          '(git-svn-needs-update "^\\(.*\\): needs update$" 1 nil nil 2 1)))
-       (add-to-list 'compilation-error-regexp-alist-alist defn))
-     (dolist (defn '(git-svn-updated git-svn-needs-update))
-       (add-to-list 'compilation-error-regexp-alist defn))))
+       (add-to-list 'compilation-error-regexp-alist-alist defn)
+       (add-to-list 'compilation-error-regexp-alist (car defn)))))
 
 (defvar git-svn--available-commands nil "Cached list of git svn subcommands")
 
 (defun git-svn (dir)
-  "Run git svn"
+  "Run a git svn subcommand in DIR."
   (interactive "DSelect directory: ")
   (unless git-svn--available-commands
     (setq git-svn--available-commands
@@ -93,5 +90,15 @@
 (global-set-key (kbd "C-c C-n") 'git-gutter:previous-hunk)
 (global-set-key (kbd "C-c C-p") 'git-gutter:next-hunk)
 (global-set-key (kbd "C-c C-o") 'git-gutter:popup-hunk)
+
+
+;;; github
+
+(require-package 'yagist)
+(require-package 'github-browse-file)
+(require-package 'bug-reference-github)
+(add-hook 'prog-mode 'bug-reference-prog-mode)
+
+
 
 (provide 'init-git)
