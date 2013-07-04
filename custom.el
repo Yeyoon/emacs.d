@@ -70,5 +70,6 @@
  '(font-lock-function-name-face ((t (:foreground "lime green"))))
  '(font-lock-keyword-face ((t (:foreground "RoyalBlue1"))))
  '(font-lock-string-face ((t (:foreground "SlateBlue1"))))
+ '(mmm-code-submode-face ((t (:background "black"))))
  '(mmm-output-submode-face ((t (:foreground "keyboardFocusIndicatorColor"))))
  '(region ((t (:background "#444444" :foreground "white")))))
