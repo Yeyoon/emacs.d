@@ -126,7 +126,6 @@
 ;; Locales (setting them earlier in this file doesn't work in X)
 ;;----------------------------------------------------------------------------
 (require 'init-locales)
-<<<<<<< HEAD
 (require 'init-keybindings)
 ;;(require 'init-google-pkgs)
 ;;(require 'init-auctex)
@@ -136,12 +135,10 @@
 (require 'init-douban)
 (require 'init-look)
 (require 'init-yasnippet)
-=======
 
 (message "init completed in %.2fms"
          (sanityinc/time-subtract-millis (current-time) before-init-time))
 
->>>>>>> dc509654bdf3f2fa3fc39e21f4dd1b478337380e
 ;; Local Variables:
 ;; coding: utf-8
 ;; no-byte-compile: t
