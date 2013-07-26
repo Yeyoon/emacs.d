@@ -68,6 +68,7 @@
 (require 'init-sh)
 ;;(require 'init-w3m)
 (require 'init-php)
+;;(require 'init-multi-web-mode)
 (require 'init-org)
 (require 'init-nxml)
 (require 'init-css)
@@ -133,8 +134,11 @@
 
 ;; multimedia
 (require 'init-douban)
+
 (require 'init-look)
 (require 'init-yasnippet)
+
+(require 'init-cedet)
 
 (message "init completed in %.2fms"
          (sanityinc/time-subtract-millis (current-time) before-init-time))

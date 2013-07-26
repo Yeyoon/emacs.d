@@ -1,7 +1,7 @@
 (require-package 'rinari)
 (after-load 'rinari
   (diminish 'rinari-minor-mode "Rin"))
-(global-rinari-mode)
+;;(global-rinari-mode)
 
 (require-package 'haml-mode)
 
