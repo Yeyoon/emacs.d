@@ -2,6 +2,8 @@
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
 (setq ac-expand-on-auto-complete nil)
+(define-key ac-completing-map "\C-n" 'ac-next)
+(define-key ac-completing-map "\C-p" 'ac-previous)
 (setq ac-auto-start t)
 (setq ac-dwim nil) ; To get pop-ups with docs even if a word is uniquely completed
 
