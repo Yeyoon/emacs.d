@@ -23,5 +23,4 @@ site-lisp/package/
 /var
 /.sqli_history
 /frame-restore-parameters
-/.sqli_history
 /semanticdb
