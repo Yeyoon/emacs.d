@@ -9,7 +9,6 @@
 ;;----------------------------------------------------------------------------
 (defconst *spell-check-support-enabled* nil)
 (defconst *is-a-mac* (eq system-type 'darwin))
-(defconst *is-carbon-emacs* (eq window-system 'mac))
 (defconst *is-cocoa-emacs* (and *is-a-mac* (eq window-system 'ns)))
 
 ;;----------------------------------------------------------------------------
@@ -42,7 +41,7 @@
 (require 'init-isearch)
 (require 'init-uniquify)
 (require 'init-ibuffer)
-(require 'init-flymake)
+(require 'init-flycheck)
 
 (require 'init-recentf)
 (require 'init-ido)
@@ -65,7 +64,6 @@
 (require 'init-csv)
 ;;(require 'init-erlang)
 (require 'init-javascript)
-(require 'init-sh)
 ;;(require 'init-w3m)
 (require 'init-php)
 ;;(require 'init-multi-web-mode)

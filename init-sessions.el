@@ -54,4 +54,10 @@
                 tags-file-name
                 register-alist)))
 
+(when (eval-when-compile (>= emacs-major-version 24))
+  (unless (boundp 'desktop-restore-frames)
+    (require-package 'frame-restore)
+    (frame-restore)))
+
+
 (provide 'init-sessions)

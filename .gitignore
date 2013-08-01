@@ -2,8 +2,6 @@
 /.emacs.desktop
 /auto-save-list
 /.session
-/eshell
-.DS_Store
 *.elc
 CVS
 .svn
@@ -23,5 +21,7 @@ site-lisp/package/
 /swank
 /.mc-lists.el
 /var
+/.sqli_history
+/frame-restore-parameters
 /.sqli_history
 /semanticdb
