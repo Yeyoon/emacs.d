@@ -40,4 +40,6 @@
 
 (global-pretty-mode t)
 
+(tool-bar-mode -1)
+
 (provide 'init-look)

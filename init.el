@@ -131,7 +131,7 @@
 (require 'init-abbrev)
 
 ;; multimedia
-(require 'init-douban)
+;;(require 'init-douban)
 
 (require 'init-look)
 (require 'init-yasnippet)
